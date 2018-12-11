@@ -1,0 +1,29 @@
+From 0f95eec98a65a44bd3894c31baa5f0b53e8b9ff8 Mon Sep 17 00:00:00 2001
+From: Philipp Trulson <philipp@trulson.de>
+Date: Fri, 30 Nov 2018 16:23:02 +0100
+Subject: [PATCH] Disable cross-compiling
+
+---
+ scripts/build.sh | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/scripts/build.sh b/scripts/build.sh
+index a23d0a43a..2a622bb99 100755
+--- a/scripts/build.sh
++++ b/scripts/build.sh
+@@ -29,9 +29,9 @@ elif [ "${XC_OSARCH}x" != "x" ]; then
+ fi
+ 
+ # Determine the arch/os combos we're building for
+-XC_ARCH=${XC_ARCH:-"386 amd64"}
+-XC_OS=${XC_OS:-linux darwin windows freebsd openbsd netbsd solaris}
+-XC_OSARCH=${XC_OSARCH:-"linux/386 linux/amd64 linux/arm linux/arm64 darwin/386 darwin/amd64 windows/386 windows/amd64 freebsd/386 freebsd/amd64 freebsd/arm openbsd/386 openbsd/amd64 openbsd/arm netbsd/386 netbsd/amd64 solaris/amd64"}
++XC_ARCH="amd64"
++XC_OS="linux"
++XC_OSARCH="linux/amd64"
+ 
+ GOPATH=${GOPATH:-$(go env GOPATH)}
+ case $(uname) in
+-- 
+2.19.2
+

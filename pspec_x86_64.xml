@@ -1,0 +1,35 @@
+<PISI>
+    <Source>
+        <Name>vault</Name>
+        <Homepage>https://www.vaultproject.io/</Homepage>
+        <Packager>
+            <Name>Philipp Trulson</Name>
+            <Email>philipp@trulson.de</Email>
+        </Packager>
+        <License>MPL-2.0</License>
+        <PartOf>security</PartOf>
+        <Summary xml:lang="en">A tool for secrets management, encryption as a service, and privileged access management</Summary>
+        <Description xml:lang="en">A tool for secrets management, encryption as a service, and privileged access management
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>vault</Name>
+        <Summary xml:lang="en">A tool for secrets management, encryption as a service, and privileged access management</Summary>
+        <Description xml:lang="en">A tool for secrets management, encryption as a service, and privileged access management
+</Description>
+        <PartOf>security</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin/vault</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-12-07</Date>
+            <Version>1.0.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Philipp Trulson</Name>
+            <Email>philipp@trulson.de</Email>
+        </Update>
+    </History>
+</PISI>

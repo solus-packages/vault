@@ -1,0 +1,33 @@
+name       : vault
+version    : 1.0.0
+release    : 1
+source     :
+    - git|https://github.com/hashicorp/vault.git : v1.0.0
+homepage   : https://www.vaultproject.io/
+license    : MPL-2.0
+component  : security
+extract    : no
+networking : yes
+summary    : A tool for secrets management, encryption as a service, and privileged access management
+description: |
+    A tool for secrets management, encryption as a service, and privileged access management
+builddeps  :
+    - git
+    - golang
+    - yarn
+setup      : |
+    export GOPATH=`pwd`
+    mkdir -p bin src/github.com/hashicorp
+    cp -r $sources/vault.git $GOPATH/src/github.com/hashicorp/vault
+    cd $GOPATH/src/github.com/hashicorp/vault/
+    %patch -Np1 < $pkgfiles/0001-Disable-cross-compiling.patch
+    make bootstrap
+build      : |
+    export GOPATH=`pwd`
+    export PATH=$PATH:$GOPATH/bin
+    cd src/github.com/hashicorp/vault
+    mkdir -p pkg/web_ui
+    make static-dist
+    make bin
+install    : |
+    install -Dm00755 src/github.com/hashicorp/vault/bin/vault $installdir/usr/bin/vault
