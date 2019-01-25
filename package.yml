@@ -1,8 +1,8 @@
 name       : vault
-version    : 1.0.1
-release    : 2
+version    : 1.0.2
+release    : 3
 source     :
-    - git|https://github.com/hashicorp/vault.git : v1.0.1
+    - git|https://github.com/hashicorp/vault.git : v1.0.2
 homepage   : https://www.vaultproject.io/
 license    : MPL-2.0
 component  : security
