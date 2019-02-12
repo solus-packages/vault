@@ -25,8 +25,8 @@
     </Package>
     <History>
         <Update release="3">
-            <Date>2019-01-24</Date>
-            <Version>1.0.2</Version>
+            <Date>2019-02-12</Date>
+            <Version>1.0.3</Version>
             <Comment>Packaging update</Comment>
             <Name>Philipp Trulson</Name>
             <Email>philipp@trulson.de</Email>
