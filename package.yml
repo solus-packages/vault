@@ -1,6 +1,6 @@
 name       : vault
 version    : 1.0.3
-release    : 3
+release    : 4
 source     :
     - git|https://github.com/hashicorp/vault.git : v1.0.3
 homepage   : https://www.vaultproject.io/
@@ -8,7 +8,8 @@ license    : MPL-2.0
 component  : security
 extract    : no
 networking : yes
-summary    : A tool for secrets management, encryption as a service, and privileged access management
+summary    : A tool for secrets management, encryption as a service, and privileged
+    access management
 description: |
     A tool for secrets management, encryption as a service, and privileged access management
 builddeps  :
